@@ -1,3 +1,3 @@
 #Portafolio CV
 
-Repositorio de portafolio del CV de @RomanoMaxi
+Repositorio del Portafolio-CV presentacion de Maximiliano Agustín Romano

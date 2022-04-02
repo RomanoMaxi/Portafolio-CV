@@ -1,0 +1,675 @@
+/* El maquetado se realiza de la forma mobile-first. Es decir, primero pensado para celulares. */
+
+/***** Custom Properties *********/
+/* Van a ir las variables que voy a crear para ir usando a lo largo del archivo */
+/* defino con :root para poder definir los colores propios */
+:root {
+  --first-color: #0a76be;
+  --first-alpha-color: rgba(15, 123, 196, 0.75);
+  --second-color: #14192d;
+  --second-alpha-color: rgba(20, 25, 45, 0.75);
+  --third-color: #501464;
+  --third-alpha-color: rgba(80, 20, 100, 0.75);
+  --white-color: #fff;
+  --gray-light-color: #f3f3f3;
+  --gray-color: #ccc;
+  --gray-dark-color: #666;
+  --black-color: #000;
+  --link-color: #509ee3;
+  --title-color: #333;
+  --text-color: #222;
+  --white-alpha-color: rgba(255, 255, 255, 0.5);
+  --black-alpha-color: rgba(0, 0, 0, 0.5);
+  --font: "Raleway", sans-serif;
+  --max-width: 1200px;
+  --header-height: 4rem;
+}
+
+/******Reset*****/
+
+html {
+  box-sizing: border-box;
+  font-family: var(--font);
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+/* Reseteo el modelo de caja */
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--text-color);
+}
+/* Reseteo el margen y especifico los tamaños de los encabezados y otros elementos */
+/* Los ordeno alfabeticamente */
+a {
+  color: var(--link-color);
+  transition: all 0.5 ease-out;
+}
+a:hover {
+  opacity: 0.75;
+}
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+h5 {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+h6 {
+  margin: 0;
+  font-size: 0.7rem;
+}
+img {
+  /* Con esto hago responsive la img */
+  max-width: 100%;
+  height: auto;
+}
+p {
+  line-height: 1.6;
+}
+/******Components****/
+/* Los códigos de todos los componentes */
+/* Seccion de habilidades */
+
+/* Carousel */
+@keyframes carousel-slide{
+  /* recordando que si agrego más slides a esto, voy a tener que recalcular los porcentajes */
+  0%{
+    transform: translateX(0%);
+  }
+  25%{
+    transform: translateX(-25%);
+  }
+  50%{
+    transform: translateX(-50%);
+  }
+  75%{
+    transform: translateX(-75%);
+  }
+}
+.carousel{
+  margin: 2rem auto;
+  padding: 2rem 0;
+  max-width: 600px;
+  text-align: center;
+  overflow-x: hidden;
+  background-color: var(--carousel-bg-color);
+}
+.carousel .slides{
+  /* por cada slide que agregue, tengo que agregar 100% */
+  width: 400%;
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  transition: transform .5s ease-in-out;
+  animation: carousel-slide 12s ease-in-out 3s;
+}
+.carousel input{
+  display: none;
+}
+.carousel label{
+  border: medium solid var(--gray-dark-color);
+  border-radius: 50%;
+  margin: 0 .25rem;
+  cursor: pointer;
+  display: inline-block;
+  width: .75rem;
+  height: .75rem;
+  
+}
+.slides li{
+ width: 100%;
+  
+}
+#slide-1:checked ~ .slides{
+  /* uso selector de elementos, y por eso los input tienen que estar primeros */
+  /* para el factor de movimiento, hay que dividir 100 por el numero de slide (en este caso 4) esto se modifica si lo cambio  */
+  transform: translateX(0);
+} 
+#slide-2:checked ~ .slides{
+  transform: translateX(-25%);
+}
+#slide-3:checked~.slides {
+  transform: translateX(-50%);
+}
+#slide-4:checked~.slides {
+  transform: translateX(-75%);
+}
+
+
+#slide-1:checked~.slides-nav label#dot-1,
+#slide-2:checked~.slides-nav label#dot-2,
+#slide-3:checked~.slides-nav label#dot-3,
+#slide-4:checked~.slides-nav label#dot-4 {
+  background-color: var(--gray-dark-color);
+}
+/* Formulario de Contacto */
+.contact-form{
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 800px;
+}
+.contact-form > *{
+  padding: .5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 100%;
+}
+.contact-form input, .contact-form textarea{
+  font-size: .85rem;
+  font-family: var(--font);
+}
+.contact-form input{
+  border: 0;
+  padding-left: 0;
+  border-bottom: thin solid var(--gray-dark-color);
+}
+.contact-form textarea{
+  border: thin solid var(--gray-dark-color);
+  resize: none;
+}
+.contact-form input[type="submit"]{
+  margin-top: 0;
+  cursor: pointer;
+  transition: all .5s ease-out;
+}
+.contact-form input[type="submit"]:hover {
+  opacity: .75;
+}
+.contact-form *::placeholder{
+  color: var(--gray-dark-color);
+}
+.contact-form-response {
+  padding: 1rem;
+  width: 400px;
+  text-align: center;
+  background-color: var(--white-color);
+
+}
+.contact-form-response svg{
+  margin-top: 2rem;
+  width: 4rem;
+  height: 4rem;
+  fill: var(--first-color);
+}
+.modal #gracias:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+@media screen and (min-width: 1024px){
+  .contact-form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* en este grid hay que tener en cuenta el "loader, y su posición */
+    column-gap: 1rem;
+  }
+  .contact-form input, 
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+  .contact-form-loader ,.contact-form textarea{
+    grid-column: span 2;
+  }
+  .contact-form input[type="submit"]{
+    margin-left: 0;
+  }
+}
+/* Hero Image */
+.hero-image {
+  /* voy a usar esto para las imagenes hero-image de todo el documento, entonces creo una variable en cada 
+    sección del html donde va la imagen, y como solo tiene alcance en donde su contenedor principal, no se afectarán */
+
+  /* llamo a la variable que defini en el html, para el inicio */
+  background-image: var(--hero-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: var(--hero-attachment);
+}
+.hero-image-opacity {
+  width: 100%;
+  min-height: 100vh;
+  /* aplico el flex al contenido que va a estar por encima de la imagen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--hero-opacity-color);
+}
+.hero-image-title {
+  font-size: 6.5vw;
+  color: var(--hero-text-color);
+}
+/* Menu */
+.menu-btn {
+  outline: thin solid var(--first-color);
+  border: 0;
+  cursor: pointer;
+  background-color: var(--second-color);
+}
+.menu-btn svg {
+  fill: var(--first-color);
+}
+.menu {
+  position: fixed;
+  left: 0;
+  bottom: var(--header-height);
+  width: 100%;
+  /* doy display flex para mostrar los elementos del menú */
+  display: flex;
+  flex-direction: column;
+  /* menu desactivado */
+  opacity: 0;
+  /* Como tengo opacidad 0 tengo que darle que el curso no haga nada al pasar por elementos */
+  pointer-events: none;
+  background-color: var(--second-color);
+  transition: opacity 0.5s ease;
+}
+/* Defino cuando se active el menu, con JS*/
+.menu.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.menu a {
+  padding: 1rem;
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--first-color);
+}
+.menu a:hover {
+  color: var(--white-color);
+  background-color: var(--first-color);
+}
+/* realizo los estilos de la ventana modal sin JS */
+.modal{
+  /* primero debe estar oculta con la opacidad */
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: 999;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--black-alpha-color);
+  /* este es el contenedor de la ventana modal, aplico display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+.modal-content{
+  position: relative;
+}
+.modal-close{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.modal-close svg{
+  /* al tocar en la cruz para cerrar, lo va a cerrrar porque apunta a un ID que no existe */
+  width: 3rem;
+  height: 3rem;
+  fill: var(--first-color);
+}  
+/* los estilos se van a aplicar al momento de hacer refencia */
+/* uso los corchetes para referirme que para todos los elementos que tengan
+el id que empiece con "trabajo", esto me sirve para todas las ventanas */
+.modal[id |= "trabajo"]:target{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+/* Divido la sección para cuando la pantalla tengo menios de 1024px */
+@media screen and (min-width: 1024px) {
+  .menu-btn {
+    display: none;
+  }
+  .menu {
+    position: static;
+    width: auto;
+    flex-direction: row;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .menu a {
+    padding: 0 1rem;
+  }
+  .menu a:last-child {
+    padding-right: 0;
+  }
+  .menu a:hover {
+    background-color: transparent;
+  }
+}
+
+/****  Utilities ****/
+/* Clases utilitarias para cosas en comun, por ejemplo de acomodar texto o tipografía que 
+puedo reutilizar en otro documento */
+.avatar{
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  
+}
+.bg-gray-light {
+  background-color: var(--gray-light-color);
+}
+.box-shadow-1 {
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+}
+.btn {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: inline-block;
+  width: 200px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white-color);
+  background-color: var(--first-color);
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width);
+}
+.full-lg-screen {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.none {
+  display: none;
+}
+.section {
+  padding: 2rem 1rem;
+}
+.section-title {
+  border-top: 3px solid var(--first-color);
+  border-bottom: 3px solid var(--first-color);
+  width: 250px;
+  margin: 2rem auto;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  color: var(--title-color);
+}
+.text-first-color{
+  color: var(--first-color);
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+@media screen and (min-width: 1024px) {
+  .text-lg-center {
+    text-align: center;
+  }
+  .text-lg-left {
+    text-align: left;
+  }
+  .text-lg-right {
+    text-align: right;
+  }
+}
+
+/**** Site Styles ****/
+/* Voy a poner los estilos específicos del proyecto que no se vuelven a usar */
+.about > article {
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+/* Diseño el formulario de contacto */
+.contact-card{
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 100%;
+  height: 144px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.contact-card > svg{
+  fill: var(--first-color);
+  width: 2rem;
+  height: 2rem;
+}
+.contact-card > small{
+  margin-top: -1top;
+}
+.social-media a{
+  padding: 0 .4rem;
+  text-decoration: none;
+}
+.social-media svg{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.footer {
+  margin-bottom: var(--header-height);
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--third-color);
+}
+
+/* .photo-container {
+  overflow: hidden;
+  border-radius: 50%;
+} */
+.header {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  padding: 1rem;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--second-color);
+}
+.header > .container {
+  /* Le doy la forma al menu para versión mobile */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: var(--first-color);
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: none;
+}
+.portfolio-card{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+.portfolio-card img{
+  width: 100%;
+  height: 100%;
+  /* esta propiedad hace que la imagen no se deforme si es rectangular, que no pierda propiedades */
+  object-fit: cover;
+}
+.portfolio-card-info{
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: var(--first-alpha-color);
+  color: var(--white-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s ease-in-out;
+}
+/* quiero que al pasar el mouse aparezca la info de la targena, entonces en ese momento le cambio la opacidad */
+.portfolio-card:hover .portfolio-card-info{
+  opacity: 1;
+  pointer-events: auto;
+}
+.portfolio-card-info > div{
+  padding: 1rem;
+  border: thin solid var(--white-color);
+  width: 100%;
+  height: 100%;
+}
+/* agrego detalles de las img modal */
+.portfolio-modal{
+  background-color: var(--white-color);
+  padding: 1rem;
+  max-width: 400px;
+  display: flex;
+  /* pongo información en columna */
+  flex-direction: column;
+}
+.portfolio-modal h3{
+  border-bottom: medium solid var(--first-color);
+  margin: 1rem auto;
+  padding: .5rem 0;
+  color:var(--title-color)
+}
+.portfolio-details{
+  /* este contenedor tiene 8 smalls y le doy grid */
+  display: grid;
+  /* creo dos columnas para los datos y le doy el tamaño de las filas para los datos de la tarjeta */
+  grid-template-columns: 40% 60%;
+  grid-auto-rows: 2rem;
+}
+.portfolio-details b{
+  color: var(--first-color);
+}
+.service-card {
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+.service-card svg {
+  fill: var(--first-color);
+  margin-bottom: 1.25rem;
+}
+.service-card h3 {
+  color: var(--title-color);
+}
+
+/* Aplico estilos para medidas inferiores */
+/* esto sería para dimensiones de tablet */
+@media screen and (min-width: 768px) {
+  /* hago el responsive de las tarjetas de contacto */
+  .contact-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    justify-content: space-between;
+  }
+
+
+  /* aca está el grid para las cards de las imagenes */
+  .portfolio > .container{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+  }
+  .portfolio .section-title {
+    grid-column: span 2;
+  }
+  /* aplico el flex direction a las ventanas modales  */
+  .portfolio-modal{
+    flex-direction: row;
+    max-width: 800px;
+  }
+  .portfolio-info{
+    margin: 1rem;
+    align-self: center;
+  }
+  /* aplico Grid a la sección de servicios al container */
+  .services > .container {
+    /* aplico grid al container que tiene el h2, y las tarjetas */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* me queda el 10% restante para dejarlo como espacio */
+    justify-content: space-between;
+    align-content: center;
+  }
+  /* pero esto incluye el titulo h2, para esto hay que decirle que el título ocupe dos columnas */
+  .services .section-title {
+    grid-column: span 3;
+  }
+  
+}
+/* esto es para la sección de escritorio */
+@media screen and (min-width: 1024px) {
+  .about {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
+    align-content: center;
+  }
+  .contact-cards{
+    grid-template-columns: repeat(4, 24%);
+  }
+  .header {
+    /* uso el sticky para que no tape el contenido y lo mando arriba */
+    position: sticky;
+    top: 0;
+    padding: 0.5rem;
+    height: calc(var(--header-height)- 0.5rem);
+  }
+  /* aplico Grid a la sección de servicios al container */
+  .portfolio>.container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .portfolio .section-title {
+    grid-column: span 3;
+  }
+  /* hago el grid para versión de escritorio de las tarjetas de Servicio */
+  .services > .container {
+    grid-template-columns: repeat(3, 30%);
+  }
+
+  .services .section-title {
+    grid-column: span 3;
+  }
+  .footer {
+    padding: 0.5rem;
+    text-align: center;
+    color: var(--white-color);
+    background-color: var(--third-color);
+  }
+}

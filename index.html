@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio CV Maximiliano Agustin Romano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Hola bienvenid@ a mi pPortafolio Profesional, soy Maxi Romano, Desarrollador Web">
+    <link rel="canonical" href="https://RomanoMaxi.github.io/Portafolio-CV">
+    <link rel="favicon" href="https://RomanoMaxi.github.io/Portafolio-CV/assets/favicon.png">
+    <link rel="apple-touch-icon" href="https://RomanoMaxi.github.io/Portafolio-CV/assets/favicon.png">
+      
+    <meta name="theme-color" content="#d9006">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:title" name="twitter:title" content="Portafolio CV Maximiliano Agustin Romano">
+    <meta property="og:image" name="twitter:image" content="https://RomanoMaxi.github.io/Portafolio-CV/assets/hero-image-home.jpg">
+    <meta property="og:url" name="twitter:url" content="https://RomanoMaxi.github.io/Portafolio-CV">
+    <meta property="og:description" name="twitter:description" content="Hola bienvenid@ a mi pPortafolio Profesional, soy Maxi Romano, Desarrollador Web">
+    <meta property="og:type" content="website">
+  
+    
+
+<body>
+    <header class="header">
+        <section class="container">
+            <div class="logo">
+                <a href="index.html"> Maxi Romano</a>
+            </div>
+            <button class="menu-btn">
+                <!-- Aca está el boton del SVG del menú, le voy a dar animación con JS -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z" />     
+                </svg>
+                <svg class="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                     <path
+                          d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z" />
+                </svg>
+            </button>
+            <!-- hago el menu de navegacion -->
+            <nav class="menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#acerca">Acerca</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#portafolio">Portafolio</a>
+                <a href="#educacion">Educación</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </section>
+    </header>
+    <!-- Como es una página en español, conviene poner los ID en español -->
+    <section id="inicio" class="home">
+        <!-- creo el article para la hero-image con el título y un 
+        boton que sirva para contacto directo -->
+        <article class="hero-image" style="--hero-image:url('assets/hero-image-home.jpg');
+        --hero-attachment:fixed;">
+            <aside class="hero-image-opacity" style="--hero-opacity-color:var(--black-alpha-color);">
+                <div class="hero-image-content">
+                    <h2 class="hero-image-title" style="--hero-text-color:var(--white-color);"> Bienvenid@s a mi sitio <br> </h2>
+                    <a href="#contacto" class="btn">CONTÁCTAME</a>
+                </div>
+            </aside>
+        </article>
+    </section>
+
+    <section id="acerca" class="about section container full-lg-screen">
+        <!-- datos y habilidades -->
+        <article class="text-lg-right">
+            <aside class=" text-center text-lg-rigth" >
+                <h1>Maximiliano Agustin Romano</h1>
+                <h5>Programador <i>web</i></h5>
+            </aside>
+            <p>Tengo 23 años, resido en la Ciudad Autónoma de Buenos Aires. Soy Técnico en Automotores y estudiante de Ingeniería Civil.</p>
+            <p>Tengo conocimientos en la programación <i> Web</i> orientado al <i>FrontEnd</i>. </p>
+            <p>Poseo actitud proactiva, capacidad para adaptarme rápidamente a situaciones de cambio. Aptitud y Actitud para trabajar en equipo. Iniciativa para generar ideas. Mentalidad y Energía positiva para aprender y aplicar nuevos conocimientos para desarrollarme y crecer personal y profesionalmente.</p>
+            <p>Apesar de no tener experiencia en el ambito laboral de la técnología tengo muchas ganas de  aprender y empezar a trabajar en este mundo de la programación </p>
+        
+            <div class="text-center text-lg-left">
+                <!-- hago un botón para descargar mi CV, reutilizo la clase del boton anterior -->
+                <a href="https://drive.google.com/file/d/1yJnobZEFrcsPez9kNKWaovP3l09PWQ5b/view?usp=sharing" class="btn" target="_blank" rel="noopener">DESCARGA MI CV</a>
+            </div>
+        </article>
+
+        <article >
+             <img class="foto-perfil" src="assets/photo.jpg" alt="Foto de Perfil">
+            
+        </article>
+
+        <article>
+            <h2 class="text-center text-lg-left" style="text-decoration: underline;">Mis Habilidades</h2>
+            <p><b>Desarrollo <i>Web FrontEnd</i></b></p>
+            <p><i><b>HTML5</i></b></p>
+            <p><b><i>CSS3 </b>(Responsive Design, Flex Box,Grid)</i></p>
+            <p><b><i>JavaScript</i></b> nivel Junior</p>
+            <p><b><i>Git</i></b></p>
+            <p><b><i>GitHub</i></b></p>
+            <p>Nivel de Ingles: Lectura y Comprensión avanzado, Oral intermedio (Certificado lenguas CLE, gobierno de CABA). </p>
+            <p><b><i>Pack Office</i> </b>(<i>Word y PowerPoint</i> Avanzado, <i>Excel</i> básico)</p>
+                
+            </div>
+        </article>
+        
+    </section>
+
+    <section id="servicios" class="services section bg-gray-light">
+        <!-- esta sección va a tener tarjetas -->
+        <div class="container full-lg-screen">
+            <h2 class="section-title">¿Que Ofrezco?</h2>
+            <!-- Ahora defino las tarjetas -->
+            <article class="service-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M20,3H4C2.897,3,2,3.897,2,5v14c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2V5C22,3.897,21.103,3,20,3z M4,19V7h16 l0.002,12H4z" />
+                    <path
+                        d="M9.293 9.293L5.586 13 9.293 16.707 10.707 15.293 8.414 13 10.707 10.707zM14.707 9.293L13.293 10.707 15.586 13 13.293 15.293 14.707 16.707 18.414 13z" />
+                </svg>
+                <h3>Programación <i>Web</i></h3>
+                <p>Desarrollo códigos JavaScript para los sitios <i>Web</i>, a nivel Junior. Teniendo en cuenta la buena práctica</p>
+            </article>
+
+            <article class="service-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M20,3H7C5.897,3,5,3.897,5,5v2H4C2.897,7,2,7.897,2,9v10c0,1.103,0.897,2,2,2h6c1.103,0,2-0.897,2-2h8c1.103,0,2-0.897,2-2 V5C22,3.897,21.103,3,20,3z M6,9h4l-0.003,9H4V9H6z M12,17V9c0-1.103-0.897-2-2-2H7V5h11v12H12z" />
+                </svg>
+                <h3>Diseño Web</h3>
+                <p>Prototipo y maqueto diseños estáticos, para convertirlos en sitios <i>web</i> responsivos, óptimos y accesibles.</p>
+            </article>
+
+            <article class="service-card">
+                <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M11.6116 3.30203C11.8551 3.23273 12.1119 3.23267 12.3553 3.30176C12.8729 3.44863 13.3952 3.58485 13.9192 3.72153C16.38 4.36334 18.8793 5.01516 21.1028 6.82618L22.1267 7.66016C22.542 7.99845 22.7498 8.49918 22.75 9V16C22.75 16.4142 22.4142 16.75 22 16.75C21.5858 16.75 21.25 16.4142 21.25 16V11.0567L21.0871 11.1896C20.3166 11.8183 19.5128 12.3066 18.6888 12.7029C18.7282 12.794 18.75 12.8944 18.75 13V17.2939C18.75 18.4272 18.0548 19.4444 16.9989 19.8561L12.9989 21.4156C12.3565 21.666 11.6435 21.666 11.0011 21.4156L7.0011 19.8561C5.94522 19.4444 5.25 18.4272 5.25 17.2939V13C5.25 12.8918 5.27292 12.7889 5.31418 12.696C4.48383 12.2973 3.67373 11.8063 2.89724 11.1738L1.8733 10.3398C1.04264 9.66327 1.04221 8.33693 1.87215 7.65967L2.91292 6.81037C5.12037 5.00904 7.60193 4.36111 10.0445 3.72335C10.5697 3.58623 11.0931 3.44957 11.6116 3.30203ZM21.25 9.0006C21.25 8.91051 21.2136 8.85102 21.1794 8.8232L20.1555 7.98922C18 6.5 16.0794 5.84319 13.6399 5.20216C13.1035 5.06121 12.5519 4.91626 11.984 4.75559C11.4135 4.91742 10.8599 5.06306 10.3217 5.20465C7.9018 5.84128 5.79323 6.39601 3.86128 7.97253L2.8205 8.82184C2.78631 8.84973 2.74996 8.90931 2.75 8.9994C2.75004 9.08949 2.78643 9.14898 2.82058 9.1768L3.84453 10.0108C5.79285 11.5977 7.92065 12.1568 10.3601 12.7978C10.8965 12.9388 11.4481 13.0837 12.016 13.2444C12.5865 13.0826 13.14 12.937 13.6782 12.7954C16.0981 12.1587 18.2068 11.604 20.1387 10.0275L21.1795 9.17816C21.2137 9.15029 21.25 9.09054 21.25 9.0006ZM13.9555 14.2766C15.0553 13.9895 16.163 13.7003 17.25 13.3046V17.2939C17.25 17.8091 16.934 18.2714 16.454 18.4585L12.454 20.018C12.1621 20.1318 11.8379 20.1318 11.546 20.018L7.54596 18.4585C7.06601 18.2714 6.75 17.8091 6.75 17.2939V13.2961C7.84877 13.6963 8.96869 13.9884 10.0808 14.2785C10.6048 14.4151 11.1271 14.5514 11.6447 14.6982C11.8881 14.7673 12.145 14.7673 12.3884 14.698C12.9069 14.5504 13.4303 14.4138 13.9555 14.2766Z"
+                        fill="black" />
+                </svg>
+              
+                <h3>Estudioso</h3>
+                <p>Actualmente estoy cursando tercer año de la carrera Ingeniería Civil en la UTN FRBA. Le dedico tiempo y atención a aprender cosas nuevas constantemente, con mucho compromiso.</p>
+            </article>
+
+            <article class="service-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <circle cx="12" cy="20" r="2" />
+                    <circle cx="12" cy="4" r="2" />
+                    <circle cx="6.343" cy="17.657" r="2" />
+                    <circle cx="17.657" cy="6.343" r="2" />
+                    <circle cx="4" cy="12" r="2.001" />
+                    <circle cx="20" cy="12" r="2" />
+                    <circle cx="6.343" cy="6.344" r="2" />
+                    <circle cx="17.657" cy="17.658" r="2" />
+                </svg>
+                <h3>Social</h3>
+                <p>Soy una persona muy sociable, dispuesta siempre a trabajar en equipo con la mejor disposición a colaborar y aportar ideas a los proyectos.</p>
+            </article>
+
+            <article class="service-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z" />
+                    <path
+                        d="M11.412,8.586C11.791,8.966,12,9.468,12,10h2c0-1.065-0.416-2.069-1.174-2.828c-1.514-1.512-4.139-1.512-5.652,0 l1.412,1.416C9.346,7.83,10.656,7.832,11.412,8.586z" />
+                </svg>
+                <h3>Rapidez</h3>
+                <p>Aprendo y me adapto rápido a distintas situaciones. Púedo trabjar bajo presión en muchas situaciones.</p>
+            </article>
+
+            <article class="service-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="none"
+                        d="M4 15v4h16.002L20 15H4zM16 18h-2v-2h2V18zM19 18h-2v-2h2V18zM4 5v4h16.002L20 5H4zM16 8h-2V6h2V8zM19 8h-2V6h2V8z" />
+                    <path
+                        d="M20 3H4C2.897 3 2 3.897 2 5v4c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V5C22 3.897 21.103 3 20 3zM4 9V5h16l.002 4H4zM20 13H4c-1.103 0-2 .897-2 2v4c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-4C22 13.897 21.103 13 20 13zM4 19v-4h16l.002 4H4z" />
+                    <path d="M17 6H19V8H17zM14 6H16V8H14zM17 16H19V18H17zM14 16H16V18H14z" />
+                </svg>
+
+                <h3>Eficiencia y lógica</h3>
+                <p>Soy una persona muy lógica a la hora de resolver situaciones donde se necesite razonar, además que siempre busco la opción más óptima para no usar más recursos de lo necesario</p>
+            </article>
+
+        </div>
+    </section>
+    <!-- sección de trabajos, galería -->
+    <section id="portafolio" class="portfolio section">
+        <div class="container">
+            <h2 class="section-title">Mis Trabajos</h2>
+            
+            <a href="#trabajo-1" class="portfolio-card">
+                <img src="assets/portfolio-1.jpg" alt="Trabajo 1">
+                <aside class="portfolio-card-info">
+                    <div>
+                        <h3>Proyecto 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nesciunt tempore deserunt nulla eius
+                            consectetur quae suscipit ipsa a est magnam odit dolore possimus numquam, illo iste explicabo beatae
+                            itaque.</p>
+                    </div>
+                </aside>
+            </a>
+            
+            <a href="#trabajo-2" class="portfolio-card">
+                <img src="assets/portfolio-2.jpg" alt="Trabajo 2">
+                <aside class="portfolio-card-info">
+                    <div>
+                        <h3>Proyecto 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nesciunt tempore deserunt nulla eius
+                            consectetur quae suscipit ipsa a est magnam odit dolore possimus numquam, illo iste explicabo beatae
+                            itaque.</p>
+                    </div>
+                </aside>
+            </a>
+            
+            <a href="#trabajo-3" class="portfolio-card">
+                <img src="assets/portfolio-3.jpg" alt="Trabajo 3">
+                <aside class="portfolio-card-info">
+                    <div>
+                        <h3>Proyecto 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nesciunt tempore deserunt nulla eius
+                            consectetur quae suscipit ipsa a est magnam odit dolore possimus numquam, illo iste explicabo beatae
+                            itaque.</p>
+                    </div>
+                </aside>
+            </a>
+        </div>
+    </section>
+    <!-- aca está la ventana modal -->
+    <article class="modal" id="trabajo-1">
+        <div class="modal-content">
+            <a href="#cerrar" class="modal-close"> <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.3394 9.32245C16.7434 8.94589 16.7657 8.31312 16.3891 7.90911C16.0126 7.50509 15.3798 7.48283 14.9758 7.85938L12.0497 10.5866L9.32245 7.66048C8.94589 7.25647 8.31312 7.23421 7.90911 7.61076C7.50509 7.98731 7.48283 8.62008 7.85938 9.0241L10.5866 11.9502L7.66048 14.6775C7.25647 15.054 7.23421 15.6868 7.61076 16.0908C7.98731 16.4948 8.62008 16.5171 9.0241 16.1405L11.9502 13.4133L14.6775 16.3394C15.054 16.7434 15.6868 16.7657 16.0908 16.3891C16.4948 16.0126 16.5171 15.3798 16.1405 14.9758L13.4133 12.0497L16.3394 9.32245Z"
+                  fill="currentColor"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z"
+                  fill="currentColor"
+                />
+                </svg>  </a>
+           <article class="portfolio-modal">
+               <img src="assets/portfolio-1.jpg" alt="Trabajo 1">
+               <div class="portfolio-info">
+                   <h3>NOMBRE DEL PROYECTO</h3>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, ut, doloremque sunt reiciendis ullam eum, quod dolore earum iure voluptatibus odio. Aperiam atque nemo, omnis corrupti vel iure soluta alias?</p>
+                   <aside class="portfolio-details">
+                       <small><b>CLIENTE</b></small>
+                       <small>Nombre del cliente</small>
+                       <small><b>FECHA</b></small>
+                       <small>31/3/2022</small>
+                       <small><b>TIPO:</b></small>
+                       <small>tipo de proyecto</small>
+                       <small><b>ENLACE:</b></small>
+                       <small><a href="#" target="_blank" rel="noopener">link proyec</a></small>
+                   </aside>
+               </div>
+           </article>
+        </div>
+    </article>
+
+    <article class="modal" id="trabajo-2">
+        <div class="modal-content">
+            <a href="#cerrar" class="modal-close"> <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.3394 9.32245C16.7434 8.94589 16.7657 8.31312 16.3891 7.90911C16.0126 7.50509 15.3798 7.48283 14.9758 7.85938L12.0497 10.5866L9.32245 7.66048C8.94589 7.25647 8.31312 7.23421 7.90911 7.61076C7.50509 7.98731 7.48283 8.62008 7.85938 9.0241L10.5866 11.9502L7.66048 14.6775C7.25647 15.054 7.23421 15.6868 7.61076 16.0908C7.98731 16.4948 8.62008 16.5171 9.0241 16.1405L11.9502 13.4133L14.6775 16.3394C15.054 16.7434 15.6868 16.7657 16.0908 16.3891C16.4948 16.0126 16.5171 15.3798 16.1405 14.9758L13.4133 12.0497L16.3394 9.32245Z"
+                  fill="currentColor"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z"
+                  fill="currentColor"
+                />
+                </svg>  </a>
+           <article class="portfolio-modal">
+               <img src="assets/portfolio-2.jpg" alt="Trabajo 2">
+               <div class="portfolio-info">
+                   <h3>NOMBRE DEL PROYECTO 2</h3>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, ut, doloremque sunt reiciendis ullam eum, quod dolore earum iure voluptatibus odio. Aperiam atque nemo, omnis corrupti vel iure soluta alias?</p>
+                   <aside class="portfolio-details">
+                       <small><b>CLIENTE</b></small>
+                       <small><b>FECHA</b></small>
+                       <small><b>TIPO DE PROYECTO</b></small>
+                       <small><b>ENLACE:</b></small>
+                       <small><a href="#" target="_blank" rel="noopener">link proyec</a></small>
+                   </aside>
+               </div>
+           </article>
+        </div>
+    </article>
+
+    <article class="modal" id="trabajo-3">
+        <div class="modal-content">
+            <a href="#cerrar" class="modal-close"> <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.3394 9.32245C16.7434 8.94589 16.7657 8.31312 16.3891 7.90911C16.0126 7.50509 15.3798 7.48283 14.9758 7.85938L12.0497 10.5866L9.32245 7.66048C8.94589 7.25647 8.31312 7.23421 7.90911 7.61076C7.50509 7.98731 7.48283 8.62008 7.85938 9.0241L10.5866 11.9502L7.66048 14.6775C7.25647 15.054 7.23421 15.6868 7.61076 16.0908C7.98731 16.4948 8.62008 16.5171 9.0241 16.1405L11.9502 13.4133L14.6775 16.3394C15.054 16.7434 15.6868 16.7657 16.0908 16.3891C16.4948 16.0126 16.5171 15.3798 16.1405 14.9758L13.4133 12.0497L16.3394 9.32245Z"
+                  fill="currentColor"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z"
+                  fill="currentColor"
+                />
+                </svg>  </a>
+           <article class="portfolio-modal">
+               <img src="assets/portfolio-3.jpg" alt="Trabajo 3">
+               <div class="portfolio-info">
+                   <h3>NOMBRE DEL PROYECTO 3</h3>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, ut, doloremque sunt reiciendis ullam eum, quod dolore earum iure voluptatibus odio. Aperiam atque nemo, omnis corrupti vel iure soluta alias?</p>
+                   <aside class="portfolio-details">
+                       <small><b>CLIENTE</b></small>
+                       <small><b>FECHA</b></small>
+                       <small><b>TIPO DE PROYECTO</b></small>
+                       <small><b>ENLACE:</b></small>
+                       <small><a href="#" target="_blank" rel="noopener">link proyec</a></small>
+                   </aside>
+               </div>
+           </article>
+        </div>
+    </article>
+
+
+    <section id="educacion" class="education">
+        <article class="hero-image" style="--hero-image:url('assets/hero-image-eduacion.jpg');
+        --hero-attachment:scroll;">
+            <aside class="hero-image-opacity" style="--hero-opacity-color:var(--white-alpha-color);">
+                <div class="hero-image-content">
+                    <div class="container">
+                        <h2 class="section-title">Educación</h2>
+                        <!-- ahora hago el carousel de img, con las tarjetas -->
+                        <article class="carousel" style="--carousel-bg-color:var(--white-alpha-color);">
+                            <!-- llamo y agrego los botones redondos. Los input tienen que estar primeros -->
+                            <input type="radio" name="slides" id="slide-1" checked>
+                            <input type="radio" name="slides" id="slide-2" >
+                            <input type="radio" name="slides" id="slide-3" >
+                            <input type="radio" name="slides" id="slide-4" >
+                            
+                            <ul class="slides">
+                                <li class="slide">
+                                    <img class="avatar" src="assets/utn-frba.jpg" alt="UTN FRBA">
+                                    <blockquote>Actualmente estoy cursando el terce año de la carrera esta carrera. Desde de 2018 a 2020 estuve cursando Ingeniería mecánica en FIUBA.</blockquote>
+                                    <h3 class="text-first-color">Ingeniería Civil</h3>
+                                    <H6>Universidad Tecnológica Nacional, Facultad Regional Buenos Aires</H6>
+                                </li>
+                                <li class="slide">
+                                    <img class="avatar" src="assets/confederacion-suiza.jpg" alt="Confederacion Suiza">
+                                    <blockquote>Estoy recibido del colegio técnico en automotores. Tuve prácticas profesionales (se detallan en experiencia laboral), y además terminé siendo uno de los mejores promedios.</blockquote>
+                                    <h3 class="text-first-color">Tecnico en Automotores</h3>
+                                    <H6>E.T N°26 "Confederación Suiza"</H6>
+                                </li>
+                                <li class="slide">
+                                    <img class="avatar" src="assets/cle.jpg" alt="CLE">
+                                    <blockquote>Mi nivel de inglés en comprensión y lectura es avanzado, y mi nivel oral es intermedio. tengo certificado de lenguas extranjeras, otorgado por el Gobierno de la Ciudad de Buenos Aires, nivel intermedio. Mas allá de esto, he estudiado inglés desde primaria.</blockquote>
+                                    <h3 class="text-first-color">Nivel de Ingles</h3>
+                                    <H6>Certificado Lenguas Extranjeras</H6>
+                                </li>
+                                <li class="slide">
+                                    <img class="avatar" src="assets/aprende-programando.jpg" alt="Aprende Programando">
+                                    <blockquote>Certificado del Gobierno CABA en Front End jr para colegios secundarios. Mas allá de este curso, he desarrollado mis habilidades en HTML5, CSS3 (Responsive Design, Flex Box, Grid), JavaScript nivel Junior, GIT, y GitHub.</blockquote>
+                                    <h3 class="text-first-color">Conocimientos Informáticos</h3>
+                                    <H6>Aprende Programando</H6>
+                                </li>
+                            </ul>
+
+                            <aside class="slides-nav">
+                                <label for="slide-1" id="dot-1"></label>
+                                <label for="slide-2" id="dot-2"></label>
+                                <label for="slide-3" id="dot-3"></label>
+                                <label for="slide-4" id="dot-4"></label>
+                            </aside>
+                        </article>
+                    </div>
+                </div>
+            </aside>
+        </article>
+    </section>
+
+    <section id="contacto" class="contact section">
+        <div class="container">
+            <h2 class="section-title">Información de Contacto</h2>
+            <article class="contact-cards">
+                <aside class="contact-card box-shadow-1">
+                    <?xml version='1.0' encoding='iso-8859-1'?>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.13 362.13" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 362.13 362.13">
+                            <g>
+                            <path d="m181.065,0c-75.532,0-136.981,61.45-136.981,136.981 0,31.155 21.475,76.714 63.827,135.411 30.619,42.436 60.744,75.965 62.011,77.372l11.144,12.367 11.144-12.367c1.267-1.406 31.392-34.936 62.011-77.372 42.352-58.697 63.827-104.255 63.827-135.411-0.001-75.531-61.451-136.981-136.983-136.981zm0,316.958c-37.733-44.112-106.981-134.472-106.981-179.977 0-58.989 47.991-106.981 106.981-106.981s106.981,47.992 106.981,106.981c0.001,45.505-69.248,135.865-106.981,179.977z"/>
+                            <circle cx="181.065" cy="136.982" r="49.696"/>
+                            </g>
+                    </svg>
+
+                    <h5>UBICACIÓN</h5>
+                    <small>Ciudad Autónoma de Buenos Aires, Argentina</small>
+                </aside>
+            
+                
+                <aside class="contact-card box-shadow-1">
+                           <?xml version="1.0" encoding="iso-8859-1"?>
+                            <!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 53.942 53.942" style="enable-background:new 0 0 53.942 53.942;" xml:space="preserve">
+                            <path d="M53.364,40.908c-2.008-3.796-8.981-7.912-9.288-8.092c-0.896-0.51-1.831-0.78-2.706-0.78c-1.301,0-2.366,0.596-3.011,1.68
+                                c-1.02,1.22-2.285,2.646-2.592,2.867c-2.376,1.612-4.236,1.429-6.294-0.629L17.987,24.467c-2.045-2.045-2.233-3.928-0.632-6.291
+                                c0.224-0.309,1.65-1.575,2.87-2.596c0.778-0.463,1.312-1.151,1.546-1.995c0.311-1.123,0.082-2.444-0.652-3.731
+                                c-0.173-0.296-4.291-7.27-8.085-9.277c-0.708-0.375-1.506-0.573-2.306-0.573c-1.318,0-2.558,0.514-3.49,1.445L4.7,3.986
+                                c-4.014,4.013-5.467,8.562-4.321,13.52c0.956,4.132,3.742,8.529,8.282,13.068l14.705,14.705c5.746,5.746,11.224,8.66,16.282,8.66
+                                c0,0,0,0,0.001,0c3.72,0,7.188-1.581,10.305-4.698l2.537-2.537C54.033,45.163,54.383,42.833,53.364,40.908z"/>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            </svg>
+
+                        <h5>TELÉFONO</h5>
+                        <small><a href="tel:5512345678">(+54) 1162264567</a></small>
+                </aside>
+
+               
+                <aside class="contact-card box-shadow-1">
+                        <?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 330.001 330.001" style="enable-background:new 0 0 330.001 330.001;" xml:space="preserve">
+                                <g id="XMLID_348_">
+                            <path id="XMLID_350_" d="M173.871,177.097c-2.641,1.936-5.756,2.903-8.87,2.903c-3.116,0-6.23-0.967-8.871-2.903L30,84.602
+                            L0.001,62.603L0,275.001c0.001,8.284,6.716,15,15,15L315.001,290c8.285,0,15-6.716,15-14.999V62.602l-30.001,22L173.871,177.097z"
+                            />
+                            <polygon id="XMLID_351_" points="165.001,146.4 310.087,40.001 19.911,40 	"/>
+                                            </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                        </svg>
+
+                        <h5>EMAIL</h5>
+                        <small><a href="maximilianoagustinromano@gmail.com">maximilianoagustinromano@gmail.com</a></small>
+                </aside>
+
+               
+                <aside class="contact-card box-shadow-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                              d="M16.018,3.815L15.232,8h-4.966l0.716-3.815L9.018,3.815L8.232,8H4v2h3.857l-0.751,4H3v2h3.731l-0.714,3.805l1.965,0.369 L8.766,16h4.966l-0.714,3.805l1.965,0.369L15.766,16H20v-2h-3.859l0.751-4H21V8h-3.733l0.716-3.815L16.018,3.815z M14.106,14H9.141 l0.751-4h4.966L14.106,14z" />
+                          </svg>
+                        <h5>SOCIAL MEDIA</h5>
+                        <small class="social-media">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                  d="M21.593,7.203c-0.23-0.858-0.905-1.535-1.762-1.766C18.265,5.007,12,5,12,5S5.736,4.993,4.169,5.404	c-0.84,0.229-1.534,0.921-1.766,1.778c-0.413,1.566-0.417,4.814-0.417,4.814s-0.004,3.264,0.406,4.814	c0.23,0.857,0.905,1.534,1.763,1.765c1.582,0.43,7.83,0.437,7.83,0.437s6.265,0.007,7.831-0.403c0.856-0.23,1.534-0.906,1.767-1.763	C21.997,15.281,22,12.034,22,12.034S22.02,8.769,21.593,7.203z M9.996,15.005l0.005-6l5.207,3.005L9.996,15.005z" />
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                  d="M19.633,7.997c0.013,0.175,0.013,0.349,0.013,0.523c0,5.325-4.053,11.461-11.46,11.461c-2.282,0-4.402-0.661-6.186-1.809	c0.324,0.037,0.636,0.05,0.973,0.05c1.883,0,3.616-0.636,5.001-1.721c-1.771-0.037-3.255-1.197-3.767-2.793	c0.249,0.037,0.499,0.062,0.761,0.062c0.361,0,0.724-0.05,1.061-0.137c-1.847-0.374-3.23-1.995-3.23-3.953v-0.05	c0.537,0.299,1.16,0.486,1.82,0.511C3.534,9.419,2.823,8.184,2.823,6.787c0-0.748,0.199-1.434,0.548-2.032	c1.983,2.443,4.964,4.04,8.306,4.215c-0.062-0.3-0.1-0.611-0.1-0.923c0-2.22,1.796-4.028,4.028-4.028	c1.16,0,2.207,0.486,2.943,1.272c0.91-0.175,1.782-0.512,2.556-0.973c-0.299,0.935-0.936,1.721-1.771,2.22	c0.811-0.088,1.597-0.312,2.319-0.624C21.104,6.712,20.419,7.423,19.633,7.997z" />
+                              </svg>
+                              <a href="https://www.linkedin.com/in/maximiliano-agustin-romano/" rel="noopener" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                      d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h16c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z M8.339,18.337H5.667	v-8.59h2.672V18.337z M7.003,8.574c-0.856,0-1.548-0.694-1.548-1.548s0.691-1.548,1.548-1.548c0.854,0,1.548,0.693,1.548,1.548	S7.857,8.574,7.003,8.574z M18.338,18.337h-2.669V14.16c0-0.996-0.018-2.277-1.388-2.277c-1.39,0-1.601,1.086-1.601,2.207v4.248	h-2.667v-8.59h2.56v1.174h0.037c0.355-0.675,1.227-1.387,2.524-1.387c2.704,0,3.203,1.778,3.203,4.092V18.337z" />
+                                  </svg>
+                              </a>
+                              <a href="https://github.com/RomanoMaxi" rel="noopener" target="_blank">    
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M12.026,2c-5.509,0-9.974,4.465-9.974,9.974c0,4.406,2.857,8.145,6.821,9.465	c0.499,0.09,0.679-0.217,0.679-0.481c0-0.237-0.008-0.865-0.011-1.696c-2.775,0.602-3.361-1.338-3.361-1.338	c-0.452-1.152-1.107-1.459-1.107-1.459c-0.905-0.619,0.069-0.605,0.069-0.605c1.002,0.07,1.527,1.028,1.527,1.028	c0.89,1.524,2.336,1.084,2.902,0.829c0.091-0.645,0.351-1.085,0.635-1.334c-2.214-0.251-4.542-1.107-4.542-4.93	c0-1.087,0.389-1.979,1.024-2.675c-0.101-0.253-0.446-1.268,0.099-2.64c0,0,0.837-0.269,2.742,1.021	c0.798-0.221,1.649-0.332,2.496-0.336c0.849,0.004,1.701,0.115,2.496,0.336c1.906-1.291,2.742-1.021,2.742-1.021	c0.545,1.372,0.203,2.387,0.099,2.64c0.64,0.696,1.024,1.587,1.024,2.675c0,3.833-2.33,4.675-4.552,4.922	c0.355,0.308,0.675,0.916,0.675,1.846c0,1.334-0.012,2.41-0.012,2.737c0,0.267,0.178,0.577,0.687,0.479	C19.146,20.115,22,16.379,22,11.974C22,6.465,17.535,2,12.026,2z" />
+                                  </svg>
+        
+                              </a>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                  d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624	C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003	c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z" />
+                                <circle cx="16.806" cy="7.207" r="1.078" />
+                                <path
+                                  d="M20.533,6.111c-0.469-1.209-1.424-2.165-2.633-2.632c-0.699-0.263-1.438-0.404-2.186-0.42	c-0.963-0.042-1.268-0.054-3.71-0.054s-2.755,0-3.71,0.054C7.548,3.074,6.809,3.215,6.11,3.479C4.9,3.946,3.945,4.902,3.477,6.111	c-0.263,0.7-0.404,1.438-0.419,2.186c-0.043,0.962-0.056,1.267-0.056,3.71c0,2.442,0,2.753,0.056,3.71	c0.015,0.748,0.156,1.486,0.419,2.187c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45	c0.963,0.042,1.268,0.055,3.71,0.055s2.755,0,3.71-0.055c0.747-0.015,1.486-0.157,2.186-0.419c1.209-0.469,2.164-1.424,2.633-2.633	c0.263-0.7,0.404-1.438,0.419-2.186c0.043-0.962,0.056-1.267,0.056-3.71s0-2.753-0.056-3.71C20.941,7.57,20.801,6.819,20.533,6.111z M19.315,15.643c-0.007,0.576-0.111,1.147-0.311,1.688c-0.305,0.787-0.926,1.409-1.712,1.711c-0.535,0.199-1.099,0.303-1.67,0.311	c-0.95,0.044-1.218,0.055-3.654,0.055c-2.438,0-2.687,0-3.655-0.055c-0.569-0.007-1.135-0.112-1.669-0.311	c-0.789-0.301-1.414-0.923-1.719-1.711c-0.196-0.534-0.302-1.099-0.311-1.669c-0.043-0.95-0.053-1.218-0.053-3.654	c0-2.437,0-2.686,0.053-3.655c0.007-0.576,0.111-1.146,0.311-1.687c0.305-0.789,0.93-1.41,1.719-1.712	c0.534-0.198,1.1-0.303,1.669-0.311c0.951-0.043,1.218-0.055,3.655-0.055c2.437,0,2.687,0,3.654,0.055	c0.571,0.007,1.135,0.112,1.67,0.311c0.786,0.303,1.407,0.925,1.712,1.712c0.196,0.534,0.302,1.099,0.311,1.669	c0.043,0.951,0.054,1.218,0.054,3.655c0,2.436,0,2.698-0.043,3.654H19.315z" />
+                              </svg>
+                        </small>
+                </aside>
+            </article>
+
+            <form class="contact-form box-shadow-1">
+            
+                    <input type="text" name="name"  placeholder="Ingresa tu nombre" title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+                    <input type="email" name="email" placeholder="Ingresa tu correo" title="Email" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                    <textarea name="comments"  cols="50" rows="10" placeholder="Dejame tus comentarios" required></textarea>
+                    <div class="contact-form-loader text-center none">
+                        <img src=" assets/loader.svg" alt="Enviando...">
+                    </div>
+                    <input type="submit" class="btn" value="ENVIAR MENSAJE">
+                
+            </form>
+            <article id="gracias" class="modal">
+                <div class="modal-content">
+                    <article class="contact-form-response">
+                        <h3>¡Muchas Gracias! <br> Por tus comentarios</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M12,18c4,0,5-4,5-4H7C7,14,8,18,12,18z" />
+                            <path
+                              d="M12,2C6.486,2,2,6.486,2,12c0,5.514,4.486,10,10,10s10-4.486,10-10C22,6.486,17.514,2,12,2z M12,20c-4.411,0-8-3.589-8-8 s3.589-8,8-8s8,3.589,8,8S16.411,20,12,20z" />
+                            <path
+                              d="M13 12l2 .012C15.012 11.55 15.194 11 16 11s.988.55 1 1h2c0-1.206-.799-3-3-3S13 10.794 13 12zM8 11c.806 0 .988.55 1 1h2c0-1.206-.799-3-3-3s-3 1.794-3 3l2 .012C7.012 11.55 7.194 11 8 11z" />
+                        </svg>
+                    </article>
+                </div>
+            </article>
+        </div>
+       
+    </section>
+
+    <footer class="footer">
+        <small>Sitio diseñado por Maximiliano Agustin Romano</small>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

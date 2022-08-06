@@ -263,6 +263,10 @@ p {
   font-size: 6.5vw;
   color: var(--hero-text-color);
 }
+.hero-image-subtitle{
+  font-size: 3.25vw;
+  color: var(--hero-text-color);
+}
 /* Menu */
 .menu-btn {
   outline: thin solid var(--first-color);
@@ -396,6 +400,16 @@ puedo reutilizar en otro documento */
   text-decoration: none;
   color: var(--white-color);
   background-color: var(--first-color);
+}
+.dowland-btn{
+ margin-top:1rem ;
+}
+.foto-cv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
 }
 .container {
   margin-left: auto;
@@ -587,6 +601,9 @@ puedo reutilizar en otro documento */
 }
 .service-card h3 {
   color: var(--title-color);
+}
+.service-card p{
+  text-align: justify;
 }
 
 /* Aplico estilos para medidas inferiores */

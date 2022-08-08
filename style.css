@@ -202,6 +202,7 @@ p {
 .contact-form *::placeholder{
   color: var(--gray-dark-color);
 }
+
 .contact-form-response {
   padding: 1rem;
   width: 400px;
@@ -215,7 +216,7 @@ p {
   height: 4rem;
   fill: var(--first-color);
 }
-.modal #gracias:target {
+.modal#gracias:target {
   opacity: 1;
   pointer-events: auto;
 }
@@ -314,13 +315,14 @@ p {
 .modal{
   /* primero debe estar oculta con la opacidad */
   opacity: 0;
-  pointer-events: none;
   position: fixed;
   z-index: 999;
   top:0;
   right: 0;
   bottom: 0;
   left: 0;
+  pointer-events: none;
+
   background-color: var(--black-alpha-color);
   /* este es el contenedor de la ventana modal, aplico display */
   display: flex;
@@ -345,7 +347,7 @@ p {
 /* los estilos se van a aplicar al momento de hacer refencia */
 /* uso los corchetes para referirme que para todos los elementos que tengan
 el id que empiece con "trabajo", esto me sirve para todas las ventanas */
-.modal[id |= "trabajo"]:target{
+.modal[id|= "trabajo"]:target{
   opacity: 1;
   pointer-events: auto;
 }
@@ -601,9 +603,6 @@ puedo reutilizar en otro documento */
 }
 .service-card h3 {
   color: var(--title-color);
-}
-.service-card p{
-  text-align: justify;
 }
 
 /* Aplico estilos para medidas inferiores */
